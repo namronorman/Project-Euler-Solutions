@@ -10,19 +10,19 @@
 
 """
 
+def sum_of_even_valued_fibonacci_sequence(limit):
+    even_numbered_sum = 0
+    first = second = head = 1
+
+    while even_numbered_sum < limit:
+        head = first + second
+        first = second
+        second = head
+
+        if head%2 == 0:
+            even_numbered_sum += head
+
+    return even_numbered_sum
+
 if __name__ == "__main__":
-    def sum_of_even_valued_fibonacci_sequence(limit):
-        even_numbered_sum = 0
-        first = second = head = 1
-
-        while even_numbered_sum < limit:
-            head = first + second
-            first = second
-            second = head
-
-            if head%2 == 0:
-                even_numbered_sum += head
-
-        print(even_numbered_sum)
-
-    sum_of_even_valued_fibonacci_sequence(limit = 4000000)
+    print(sum_of_even_valued_fibonacci_sequence(limit = 4000000))

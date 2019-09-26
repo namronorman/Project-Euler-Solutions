@@ -8,14 +8,14 @@
 
 """
 
+def multiples_of(limit):
+    multiples_sum = 0
+
+    for i in range(1, limit):
+        if i%3 == 0 or i%5 == 0:
+            multiples_sum = multiples_sum + i
+
+    print(multiples_sum)
+
 if __name__ == "__main__":
-    def multiples_of(limit):
-        multiples_sum = 0
-
-        for i in range(1, limit):
-            if i%3 == 0 or i%5 == 0:
-                multiples_sum = multiples_sum + i
-
-        print(multiples_sum)
-
     multiples_of(limit = 1000)
