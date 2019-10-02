@@ -10,6 +10,8 @@
 
 """
 
+import time
+
 def sum_of_even_valued_fibonacci_sequence(limit):
     even_numbered_sum = 0
     first = second = head = 1
@@ -25,4 +27,8 @@ def sum_of_even_valued_fibonacci_sequence(limit):
     return even_numbered_sum
 
 if __name__ == "__main__":
+    starting_time = time.time()
+
     print(sum_of_even_valued_fibonacci_sequence(limit = 4000000))
+
+    print("\nExecution time: ", float(time.time() - starting_time), " seconds")

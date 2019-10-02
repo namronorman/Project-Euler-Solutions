@@ -9,6 +9,7 @@
 """
 
 import math
+import time
 
 def is_prime(number):
     if number%2 == 0 and number > 2 or number == 1:
@@ -27,4 +28,8 @@ def largest_prime_factor(number):
     return biggest_factor
 
 if __name__ == "__main__":
+    starting_time = time.time()
+
     print(largest_prime_factor(number = 600851475143))
+
+    print("\nExecution time: ", float(time.time() - starting_time), " seconds")

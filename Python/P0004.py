@@ -9,6 +9,7 @@
 """
 
 import math
+import time
 
 def num_digits(number):
     return int(math.log10(number)) + 1
@@ -44,4 +45,8 @@ def biggest_palindrome(number_of_digits):
 
 
 if __name__ == "__main__":
+    starting_time = time.time()
+
     print(biggest_palindrome(number_of_digits = 3))
+
+    print("\nExecution time: ", float(time.time() - starting_time), " seconds")

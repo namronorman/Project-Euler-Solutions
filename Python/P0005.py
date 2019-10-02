@@ -8,13 +8,21 @@
 
 """
 
+import time
+
 def divisible_by_list(list_of_numbers, number):
     return all((number/i)%1 == 0 for i in list_of_numbers)
 
 if __name__ == "__main__":
-    iteration = 1
+    starting_time = time.time()
+
+    # Start at 2520 as it's the smallest number that 1-10 evenly divide by
+    iteration = 2520
 
     while divisible_by_list(list_of_numbers = range(1,21,1), number = iteration) == False:
-        iteration = iteration + 1
+        # Increase iteration by largest number we wish to divide by (20)
+        iteration = iteration + 20
 
     print(iteration)
+
+    print("\nExecution time: ", float(time.time() - starting_time), " seconds")

@@ -8,6 +8,8 @@
 
 """
 
+import time
+
 def multiples_of(limit):
     multiples_sum = 0
 
@@ -18,4 +20,8 @@ def multiples_of(limit):
     print(multiples_sum)
 
 if __name__ == "__main__":
+    starting_time = time.time()
+
     multiples_of(limit = 1000)
+
+    print("\nExecution time: ", float(time.time() - starting_time), " seconds")
