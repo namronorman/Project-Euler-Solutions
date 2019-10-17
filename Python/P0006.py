@@ -15,6 +15,11 @@
 """
 
 import numpy as np
+import time
 
 if __name__ == "__main__":
+    starting_time = time.time()
+
     print(sum(range(1,101,1))**2 - sum(np.square(range(1,101,1))))
+
+    print("\nExecution time: ", float(time.time() - starting_time), " seconds")

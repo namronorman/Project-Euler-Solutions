@@ -9,6 +9,7 @@
 """
 
 import math
+import time
 
 def is_prime(number):
     if number%2 == 0 and number > 2 or number == 1:
@@ -17,6 +18,8 @@ def is_prime(number):
     return all(number%i for i in range(3, int(math.sqrt(number)) + 1, 2))
 
 if __name__ == "__main__":
+    starting_time = time.time()
+
     digit = 0
     prime_count = 0
 
@@ -27,3 +30,5 @@ if __name__ == "__main__":
             prime_count = prime_count + 1
 
     print(digit)
+
+    print("\nExecution time: ", float(time.time() - starting_time), " seconds")

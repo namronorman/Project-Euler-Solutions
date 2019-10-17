@@ -29,7 +29,11 @@
 
 """
 
+import time
+
 if __name__ == "__main__":
+    starting_time = time.time()
+
     biggest_product = 0
     current_product = 1
     biggest_digits = 0
@@ -73,3 +77,5 @@ if __name__ == "__main__":
             biggest_digits = block[i:i+13]
 
     print(biggest_product)
+
+    print("\nExecution time: ", float(time.time() - starting_time), " seconds")

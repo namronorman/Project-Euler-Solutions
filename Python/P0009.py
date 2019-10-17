@@ -12,6 +12,8 @@
 
 """
 
+import time
+
 def find_special_pythagorean_triplet(number):
     for c in range(1, number + 1, 1):
         for b in range(1, number + 1, 1):
@@ -25,4 +27,8 @@ def find_special_pythagorean_triplet(number):
 
 
 if __name__ == "__main__":
+    starting_time = time.time()
+
     print(find_special_pythagorean_triplet(1000))
+
+    print("\nExecution time: ", float(time.time() - starting_time), " seconds")
